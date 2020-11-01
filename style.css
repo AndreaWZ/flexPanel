@@ -1,7 +1,64 @@
 body {
     background-color: aquamarine;
+    margin: 0;
 }
 
 .container {
+    margin: 0;
     display: flex;
+    width: 100%;
 }
+
+p {
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.effectF {
+    animation: fadeInDown;
+    animation-duration: 5s;
+}
+
+.effectL {
+    animation: fadeInUp;
+    animation-duration: 5s;
+}
+
+@keyframes animate {
+
+}
+
+#img1 {
+    background-image: url("images/1.jpeg");
+}
+
+#img2 {
+    background-image: url("images/2.jpeg");
+}
+
+#img3 {
+    background-image: url("images/3.jpeg");
+}
+
+#img4 {
+    background-image: url("images/4.jpeg");
+}
+
+#img5 {
+    background-image: url("images/5.jpeg");
+}
+
+#img1, #img2, #img3, #img4, #img5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 20%;
+}
+
