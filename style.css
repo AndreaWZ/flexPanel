@@ -1,34 +1,23 @@
 body {
     background-color: aquamarine;
     margin: 0;
+    max-width: 1440px;
 }
 
 .container {
     margin: 0;
     display: flex;
-    width: 100%;
+    max-width: 1440px;
 }
 
 p {
-    font-size: 60px;
+    display: flex;
+    align-self: center;
+    font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 8px black;
-}
-
-.effectF {
-    animation: fadeInDown;
-    animation-duration: 5s;
-}
-
-.effectL {
-    animation: fadeInUp;
-    animation-duration: 5s;
-}
-
-@keyframes animate {
-
 }
 
 #img1 {
@@ -60,5 +49,45 @@ p {
     background-size: cover;
     height: 100vh;
     width: 20%;
+}
+
+.first, .last {
+    margin-top: 0px;
+    z-index: -1;
+}
+
+#imgEffect {
+    padding: 0 150px 0 150px;
+}
+
+.firstEffect {
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+    animation-name: effectF;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes effectF {
+    from {top: 0px;} 
+    to {top: 150px;}
+}
+
+.lastEffect {
+    margin-top: 0;
+    position: relative;
+    animation-name: effectL;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes effectL {
+    from {top: 150px;}
+    to {top: 0px;}
 }
 
